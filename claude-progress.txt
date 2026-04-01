@@ -74,8 +74,9 @@ COMPLETED (this session):
 ✓ Cleaned up bmidashboard.com placeholder URLs
 ✓ F18 Performance Optimization (partial): caching headers, security headers, asset optimization
 
+✓ GitHub repo created: https://github.com/taeshin11/bmi-bodyfat
+✓ F19 Vercel deployed: https://bmi-bodyfat.vercel.app
+
 REMAINING BLOCKERS:
 - F12: Needs Adsterra account keys
 - F13: Needs Google Apps Script Web App URL
-- F19: Ready to deploy → vercel --prod --yes
-- Git remote: gh repo create bmi-bodyfat --public --source=. --remote=origin

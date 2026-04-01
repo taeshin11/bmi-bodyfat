@@ -128,7 +128,7 @@
   {
     "id": "F19",
     "title": "Vercel Deployment",
-    "status": "pending",
+    "status": "done",
     "priority": 4,
     "description": "Deploy via Vercel CLI, verify live site, update README with Vercel URL."
   }
