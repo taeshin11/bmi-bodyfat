@@ -1,0 +1,81 @@
+=== BMI Dashboard — Claude Progress Log ===
+Last updated: 2026-04-01
+
+=== SESSION 1 — Initializer + Builder ===
+Status: COMPLETE
+
+COMPLETED (this session):
+✓ F01 - Project scaffold: full directory structure, all HTML/CSS/JS files, handoff files
+✓ F02 - BMI Calculator: metric/imperial toggle, height/weight inputs, WHO categories, insights
+✓ F03 - US Navy Body Fat Calculator: gender-specific log10 formulas, ACE categories
+✓ F04 - Animated Gauge Charts: Canvas-based, color-coded zones, animated needle, HiDPI aware, responsive
+✓ F05 - Input Validation & UX: real-time validation, 300ms debounced auto-calc, reset, localStorage
+✓ F06 - Combined Results Dashboard: side-by-side cards, category badges, health insights, disclaimer
+✓ F07 - Responsive Design: mobile-first, breakpoints 320/768/1024/1440px, 44px tap targets
+✓ F08 - SEO Meta Tags & Structured Data: JSON-LD (WebApplication + FAQPage + BreadcrumbList), OG, Twitter Card, canonical
+✓ F09 - Sitemap (sitemap.xml) & robots.txt
+✓ F10 - PWA Manifest (manifest.json)
+✓ F11 - Educational Content & FAQ: 5 content sections, 9 FAQ accordions (<details>/<summary>)
+✓ F14 - Visitor Counter: localStorage-based, session deduplication, today+total display
+✓ F15 - Feedback Form: floating FAB, modal dialog, type+message fields, mailto submit, toast
+✓ F16 - Policy Pages: about.html, privacy.html, terms.html, contact.html
+✓ F17 - Share & Print: Twitter/Facebook/WhatsApp share buttons, Print Results button
+
+FILE STRUCTURE (all created):
+  index.html         — Main app (1000+ lines, full SEO, calculator, results, education, FAQ, footer)
+  about.html         — About page
+  privacy.html       — Privacy Policy
+  terms.html         — Terms of Service
+  contact.html       — Contact page
+  css/style.css      — Complete design system with CSS custom properties
+  js/calculator.js   — BMI + Body Fat calculation, tab switching, validation, localStorage
+  js/gauge.js        — Canvas gauge charts (window.updateBmiGauge, window.updateBodyFatGauge, window.setGaugeGender)
+  js/data-collector.js — Google Sheets webhook (fire-and-forget, fail silent)
+  js/counter.js      — Visitor counter (localStorage, session dedup)
+  js/feedback.js     — Floating feedback widget
+  sitemap.xml        — 5-page sitemap
+  robots.txt         — Allow all, sitemap ref
+  manifest.json      — PWA manifest
+  vercel.json        — Vercel config (cleanUrls, security headers)
+  feature_list.json  — Feature tracking
+  init.sh            — Bootstrap script
+  README.md          — Project readme
+
+PENDING (require external setup):
+⏳ F12 - Adsterra Ad Integration
+   → Placeholder divs already in index.html with comments
+   → User: create Adsterra account, get ad unit keys, paste into placeholder divs
+
+⏳ F13 - Google Sheets Webhook
+   → WEBHOOK_URL placeholder in js/data-collector.js
+   → Apps Script doPost() code is in data-collector.js as a comment block
+   → User: deploy Apps Script → paste Web App URL into WEBHOOK_URL constant
+
+⏳ F18 - Performance Optimization
+   → Run after all features done: Lighthouse audit, minify, inline critical CSS
+
+⏳ F19 - Vercel Deployment
+   → Command: vercel --prod --yes
+   → After deploy: update canonical URLs from bmidashboard.com to real Vercel URL
+   → Update sitemap.xml and robots.txt with real URL
+   → Update README.md with live link
+
+=== SESSION 2 — QA & Optimization ===
+Status: COMPLETE
+
+COMPLETED (this session):
+✓ Git repo initialized
+✓ Fixed broken nav links (how-to-use.html → howto.html) in privacy, terms, contact pages
+✓ Added complete CSS for sub-pages (navbar, prose-card, footer, contact layout, responsive)
+✓ Created PWA icons (SVG, 192x192 and 512x512)
+✓ Updated manifest.json to reference SVG icons
+✓ Enhanced vercel.json: caching headers, Referrer-Policy, Permissions-Policy
+✓ Updated .gitignore with comprehensive rules
+✓ Cleaned up bmidashboard.com placeholder URLs
+✓ F18 Performance Optimization (partial): caching headers, security headers, asset optimization
+
+REMAINING BLOCKERS:
+- F12: Needs Adsterra account keys
+- F13: Needs Google Apps Script Web App URL
+- F19: Ready to deploy → vercel --prod --yes
+- Git remote: gh repo create bmi-bodyfat --public --source=. --remote=origin

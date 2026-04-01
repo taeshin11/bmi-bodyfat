@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="80" fill="#4A90E2"/>
+  <circle cx="256" cy="256" r="170" fill="none" stroke="white" stroke-width="12" opacity="0.2"/>
+  <path d="M128 352 L208 224 L288 304 L352 176" stroke="white" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="352" cy="176" r="20" fill="white"/>
+  <text x="256" y="448" text-anchor="middle" font-family="Inter, sans-serif" font-size="52" font-weight="700" fill="white" opacity="0.9">BMI</text>
+</svg>

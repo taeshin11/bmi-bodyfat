@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>Free BMI &amp; Body Fat Calculator — Accurate US Navy Method | BMI Dashboard</title>
+  <meta name="description" content="Calculate your BMI and body fat % instantly using the US Navy method. Free, accurate health tool with visual gauges and personalized insights." />
+  <meta name="keywords" content="BMI calculator, body fat calculator, US Navy body fat method, body mass index, body fat percentage, free health calculator, BMI chart, healthy BMI range, body composition calculator, waist to height ratio" />
+  <link rel="canonical" href="https://bmi-bodyfat.vercel.app/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bmi-bodyfat.vercel.app/" />
+  <meta property="og:title" content="Free BMI &amp; Body Fat Calculator — Accurate US Navy Method | BMI Dashboard" />
+  <meta property="og:description" content="Calculate your BMI and body fat % instantly using the US Navy method. Free, accurate health tool with visual gauges and personalized insights." />
+  <meta property="og:image" content="https://bmi-bodyfat.vercel.app/og-image.png" />
+  <meta property="og:site_name" content="BMI Dashboard" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@bmidashboard" />
+  <meta name="twitter:title" content="Free BMI &amp; Body Fat Calculator — US Navy Method" />
+  <meta name="twitter:description" content="Calculate your BMI and body fat % instantly. Free, accurate, and visual." />
+  <meta name="twitter:image" content="https://bmi-bodyfat.vercel.app/og-image.png" />
+
+  <!-- Manifest & Theme -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#4A90E2" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- JSON-LD: WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "BMI Dashboard",
+    "url": "https://bmi-bodyfat.vercel.app/",
+    "description": "Free BMI and Body Fat Percentage calculator using the accurate US Navy method.",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "SPINAI",
+      "email": "taeshinkim11@gmail.com"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a healthy BMI range?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A healthy BMI is between 18.5 and 24.9. Below 18.5 is considered underweight, 25–29.9 is overweight, and 30 or above is obese."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How accurate is the US Navy body fat method?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The US Navy method is accurate to within 3–4% compared to hydrostatic weighing for most adults. It uses circumference measurements to estimate body density."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a healthy body fat percentage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For men, 6–24% is generally considered healthy depending on age. For women, 16–30% is typical. Athletes may have lower percentages."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is BMI or body fat percentage more accurate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Body fat percentage is generally more accurate because it distinguishes between muscle and fat mass, which BMI cannot do."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://bmi-bodyfat.vercel.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "BMI Calculator",
+        "item": "https://bmi-bodyfat.vercel.app/#bmi-calculator"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Body Fat Calculator",
+        "item": "https://bmi-bodyfat.vercel.app/#bodyfat-calculator"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container navbar__inner">
+      <a href="/" class="navbar__logo" aria-label="BMI Dashboard home">
+        <svg class="navbar__logo-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="16" fill="#4A90E2"/>
+          <path d="M8 22 L13 14 L18 19 L22 11" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="22" cy="11" r="2" fill="white"/>
+        </svg>
+        BMI Dashboard
+      </a>
+      <button class="navbar__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+      <ul class="navbar__links" id="nav-menu" role="list">
+        <li><a href="/" class="navbar__link navbar__link--active">Home</a></li>
+        <li><a href="/about" class="navbar__link">About</a></li>
+        <li><a href="/howto" class="navbar__link">How to Use</a></li>
+        <li><a href="/privacy" class="navbar__link">Privacy</a></li>
+        <li><a href="/terms" class="navbar__link">Terms</a></li>
+        <li><a href="/contact" class="navbar__link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="container hero__inner">
+      <div class="hero__badge">Free Health Tool</div>
+      <h1 id="hero-heading" class="hero__title">Free BMI &amp; Body Fat Calculator</h1>
+      <p class="hero__subtitle">
+        Get instant, accurate results using the clinically-validated US Navy method.
+        Understand your health metrics with beautiful visual gauges and personalized insights.
+      </p>
+      <div class="hero__stats" aria-label="Tool statistics">
+        <div class="hero__stat">
+          <strong>2</strong> Calculators
+        </div>
+        <div class="hero__stat-divider" aria-hidden="true"></div>
+        <div class="hero__stat">
+          <strong>100%</strong> Free
+        </div>
+        <div class="hero__stat-divider" aria-hidden="true"></div>
+        <div class="hero__stat">
+          <strong>US Navy</strong> Method
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AD PLACEHOLDER: Below Hero ===== -->
+  <div class="ad-container ad-container--hero" aria-label="Advertisement">
+    <p class="ad-label">Advertisement</p>
+    <!-- Adsterra ad code goes here -->
+    <div class="ad-placeholder" data-ad-slot="hero-banner">
+      <span>Ad Space — 728×90</span>
+    </div>
+  </div>
+
+  <!-- ===== CALCULATOR SECTION ===== -->
+  <section class="calculator-section" id="calculator" aria-labelledby="calculator-heading">
+    <div class="container">
+      <h2 id="calculator-heading" class="section-title">Health Calculator</h2>
+      <p class="section-subtitle">Enter your measurements to get instant results</p>
+
+      <div class="calculator-card">
+        <!-- Tab Buttons -->
+        <div class="tabs" role="tablist" aria-label="Calculator tabs">
+          <button
+            class="tab-btn tab-btn--active"
+            id="tab-bmi"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-bmi"
+            data-tab="bmi"
+          >
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C7.8 2 6 3.8 6 6s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM4 18c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            BMI Calculator
+          </button>
+          <button
+            class="tab-btn"
+            id="tab-bodyfat"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-bodyfat"
+            data-tab="bodyfat"
+          >
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M10 6v4l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            Body Fat Calculator
+          </button>
+        </div>
+
+        <!-- BMI Panel -->
+        <div class="tab-panel" id="panel-bmi" role="tabpanel" aria-labelledby="tab-bmi">
+          <form id="bmi-form" class="calc-form" novalidate>
+            <!-- Unit Toggle -->
+            <div class="form-group form-group--toggle">
+              <label class="form-label">Unit System</label>
+              <div class="unit-toggle" role="group" aria-label="Unit system">
+                <input type="radio" id="bmi-metric" name="bmi-unit" value="metric" checked />
+                <label for="bmi-metric" class="unit-toggle__btn">Metric</label>
+                <input type="radio" id="bmi-imperial" name="bmi-unit" value="imperial" />
+                <label for="bmi-imperial" class="unit-toggle__btn">Imperial</label>
+              </div>
+            </div>
+
+            <!-- Height -->
+            <div class="form-group" id="bmi-height-metric-group">
+              <label for="bmi-height-cm" class="form-label">Height</label>
+              <div class="input-with-unit">
+                <input
+                  type="number" id="bmi-height-cm" name="bmi-height-cm"
+                  class="form-input" placeholder="170"
+                  min="50" max="300" step="0.1"
+                  aria-label="Height in centimeters"
+                />
+                <span class="input-unit">cm</span>
+              </div>
+            </div>
+            <div class="form-group form-group--split hidden" id="bmi-height-imperial-group">
+              <label class="form-label">Height</label>
+              <div class="input-split">
+                <div class="input-with-unit">
+                  <input
+                    type="number" id="bmi-height-ft" name="bmi-height-ft"
+                    class="form-input" placeholder="5"
+                    min="1" max="9" step="1"
+                    aria-label="Height feet"
+                  />
+                  <span class="input-unit">ft</span>
+                </div>
+                <div class="input-with-unit">
+                  <input
+                    type="number" id="bmi-height-in" name="bmi-height-in"
+                    class="form-input" placeholder="10"
+                    min="0" max="11" step="0.5"
+                    aria-label="Height inches"
+                  />
+                  <span class="input-unit">in</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Weight -->
+            <div class="form-group" id="bmi-weight-metric-group">
+              <label for="bmi-weight-kg" class="form-label">Weight</label>
+              <div class="input-with-unit">
+                <input
+                  type="number" id="bmi-weight-kg" name="bmi-weight-kg"
+                  class="form-input" placeholder="70"
+                  min="1" max="500" step="0.1"
+                  aria-label="Weight in kilograms"
+                />
+                <span class="input-unit">kg</span>
+              </div>
+            </div>
+            <div class="form-group hidden" id="bmi-weight-imperial-group">
+              <label for="bmi-weight-lbs" class="form-label">Weight</label>
+              <div class="input-with-unit">
+                <input
+                  type="number" id="bmi-weight-lbs" name="bmi-weight-lbs"
+                  class="form-input" placeholder="154"
+                  min="1" max="1100" step="0.5"
+                  aria-label="Weight in pounds"
+                />
+                <span class="input-unit">lbs</span>
+              </div>
+            </div>
+
+            <!-- Age (optional, for context) -->
+            <div class="form-group">
+              <label for="bmi-age" class="form-label">Age <span class="form-label--optional">(optional)</span></label>
+              <div class="input-with-unit">
+                <input
+                  type="number" id="bmi-age" name="bmi-age"
+                  class="form-input" placeholder="30"
+                  min="2" max="120" step="1"
+                  aria-label="Age in years"
+                />
+                <span class="input-unit">yrs</span>
+              </div>
+            </div>
+
+            <div class="form-error hidden" id="bmi-error" role="alert"></div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn--primary" id="bmi-calculate-btn">
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Calculate BMI
+              </button>
+              <button type="button" class="btn btn--outline" id="bmi-reset-btn">
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 4l12 12M4 16L16 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Reset
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Body Fat Panel -->
+        <div class="tab-panel hidden" id="panel-bodyfat" role="tabpanel" aria-labelledby="tab-bodyfat">
+          <form id="bodyfat-form" class="calc-form" novalidate>
+            <!-- Gender Toggle -->
+            <div class="form-group form-group--toggle">
+              <label class="form-label">Gender</label>
+              <div class="gender-toggle" role="group" aria-label="Gender">
+                <input type="radio" id="bf-male" name="bf-gender" value="male" checked />
+                <label for="bf-male" class="gender-toggle__btn">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="7" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M6 18v-2a4 4 0 018 0v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                  Male
+                </label>
+                <input type="radio" id="bf-female" name="bf-gender" value="female" />
+                <label for="bf-female" class="gender-toggle__btn">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="7" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M6 18v-2a4 4 0 018 0v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                  Female
+                </label>
+              </div>
+            </div>
+
+            <!-- Unit Toggle -->
+            <div class="form-group form-group--toggle">
+              <label class="form-label">Unit System</label>
+              <div class="unit-toggle" role="group" aria-label="Unit system">
+                <input type="radio" id="bf-metric" name="bf-unit" value="metric" checked />
+                <label for="bf-metric" class="unit-toggle__btn">Metric</label>
+                <input type="radio" id="bf-imperial" name="bf-unit" value="imperial" />
+                <label for="bf-imperial" class="unit-toggle__btn">Imperial</label>
+              </div>
+            </div>
+
+            <!-- Height -->
+            <div class="form-group" id="bf-height-metric-group">
+              <label for="bf-height-cm" class="form-label">Height</label>
+              <div class="input-with-unit">
+                <input type="number" id="bf-height-cm" name="bf-height-cm" class="form-input" placeholder="170" min="50" max="300" step="0.1" aria-label="Height in centimeters" />
+                <span class="input-unit">cm</span>
+              </div>
+            </div>
+            <div class="form-group form-group--split hidden" id="bf-height-imperial-group">
+              <label class="form-label">Height</label>
+              <div class="input-split">
+                <div class="input-with-unit">
+                  <input type="number" id="bf-height-ft" name="bf-height-ft" class="form-input" placeholder="5" min="1" max="9" step="1" aria-label="Height feet" />
+                  <span class="input-unit">ft</span>
+                </div>
+                <div class="input-with-unit">
+                  <input type="number" id="bf-height-in" name="bf-height-in" class="form-input" placeholder="10" min="0" max="11" step="0.5" aria-label="Height inches" />
+                  <span class="input-unit">in</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Waist -->
+            <div class="form-group" id="bf-waist-metric-group">
+              <label for="bf-waist-cm" class="form-label">
+                Waist Circumference
+                <button type="button" class="help-btn" aria-label="Help: where to measure waist" data-tooltip="Measure at the narrowest point, usually just above the belly button.">?</button>
+              </label>
+              <div class="input-with-unit">
+                <input type="number" id="bf-waist-cm" name="bf-waist-cm" class="form-input" placeholder="80" min="40" max="250" step="0.1" aria-label="Waist in centimeters" />
+                <span class="input-unit">cm</span>
+              </div>
+            </div>
+            <div class="form-group hidden" id="bf-waist-imperial-group">
+              <label for="bf-waist-in" class="form-label">
+                Waist Circumference
+                <button type="button" class="help-btn" aria-label="Help: where to measure waist" data-tooltip="Measure at the narrowest point, usually just above the belly button.">?</button>
+              </label>
+              <div class="input-with-unit">
+                <input type="number" id="bf-waist-in" name="bf-waist-in" class="form-input" placeholder="31" min="15" max="100" step="0.25" aria-label="Waist in inches" />
+                <span class="input-unit">in</span>
+              </div>
+            </div>
+
+            <!-- Neck -->
+            <div class="form-group" id="bf-neck-metric-group">
+              <label for="bf-neck-cm" class="form-label">
+                Neck Circumference
+                <button type="button" class="help-btn" aria-label="Help: where to measure neck" data-tooltip="Measure just below the larynx (Adam's apple), slanting slightly downward.">?</button>
+              </label>
+              <div class="input-with-unit">
+                <input type="number" id="bf-neck-cm" name="bf-neck-cm" class="form-input" placeholder="38" min="20" max="80" step="0.1" aria-label="Neck in centimeters" />
+                <span class="input-unit">cm</span>
+              </div>
+            </div>
+            <div class="form-group hidden" id="bf-neck-imperial-group">
+              <label for="bf-neck-in" class="form-label">
+                Neck Circumference
+                <button type="button" class="help-btn" aria-label="Help: where to measure neck" data-tooltip="Measure just below the larynx (Adam's apple), slanting slightly downward.">?</button>
+              </label>
+              <div class="input-with-unit">
+                <input type="number" id="bf-neck-in" name="bf-neck-in" class="form-input" placeholder="15" min="8" max="32" step="0.25" aria-label="Neck in inches" />
+                <span class="input-unit">in</span>
+              </div>
+            </div>
+
+            <!-- Hip (Female only) -->
+            <div class="form-group" id="bf-hip-metric-group">
+              <label for="bf-hip-cm" class="form-label">
+                Hip Circumference
+                <button type="button" class="help-btn" aria-label="Help: where to measure hips" data-tooltip="Measure at the widest point of the hips and buttocks.">?</button>
+              </label>
+              <div class="input-with-unit">
+                <input type="number" id="bf-hip-cm" name="bf-hip-cm" class="form-input" placeholder="95" min="50" max="250" step="0.1" aria-label="Hip in centimeters" />
+                <span class="input-unit">cm</span>
+              </div>
+            </div>
+            <div class="form-group hidden" id="bf-hip-imperial-group">
+              <label for="bf-hip-in" class="form-label">
+                Hip Circumference
+                <button type="button" class="help-btn" aria-label="Help: where to measure hips" data-tooltip="Measure at the widest point of the hips and buttocks.">?</button>
+              </label>
+              <div class="input-with-unit">
+                <input type="number" id="bf-hip-in" name="bf-hip-in" class="form-input" placeholder="37" min="20" max="100" step="0.25" aria-label="Hip in inches" />
+                <span class="input-unit">in</span>
+              </div>
+            </div>
+
+            <div class="form-error hidden" id="bodyfat-error" role="alert"></div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn--primary" id="bodyfat-calculate-btn">
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Calculate Body Fat
+              </button>
+              <button type="button" class="btn btn--outline" id="bodyfat-reset-btn">
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 4l12 12M4 16L16 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Reset
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESULTS DASHBOARD ===== -->
+  <section class="results-section" id="results" aria-labelledby="results-heading" aria-live="polite">
+    <div class="container">
+      <h2 id="results-heading" class="section-title">Your Results</h2>
+      <p class="section-subtitle">Visual breakdown of your health metrics</p>
+
+      <div class="results-grid">
+        <!-- BMI Result Card -->
+        <div class="result-card" id="bmi-result-card" aria-label="BMI result">
+          <div class="result-card__header">
+            <h3 class="result-card__title">Body Mass Index</h3>
+            <span class="result-card__abbr">BMI</span>
+          </div>
+          <div class="gauge-container">
+            <canvas id="bmi-gauge" width="200" height="120" aria-label="BMI gauge chart" role="img"></canvas>
+          </div>
+          <div class="result-card__metric" id="bmi-value" aria-live="polite">
+            <span class="result-card__number" id="bmi-number">--</span>
+            <span class="result-card__unit">kg/m²</span>
+          </div>
+          <div class="result-card__category" id="bmi-category-badge" aria-live="polite">
+            <span class="category-badge" id="bmi-category-text">Enter your measurements</span>
+          </div>
+          <div class="result-card__insight" id="bmi-insight" aria-live="polite">
+            <p>Calculate your BMI to see personalized health insights here.</p>
+          </div>
+          <div class="result-card__ranges">
+            <h4 class="result-card__ranges-title">BMI Categories</h4>
+            <ul class="range-list" aria-label="BMI category ranges">
+              <li class="range-item range-item--info"><span class="range-dot"></span><span>Underweight: &lt; 18.5</span></li>
+              <li class="range-item range-item--success"><span class="range-dot"></span><span>Normal: 18.5 – 24.9</span></li>
+              <li class="range-item range-item--warning"><span class="range-dot"></span><span>Overweight: 25 – 29.9</span></li>
+              <li class="range-item range-item--danger"><span class="range-dot"></span><span>Obese: ≥ 30</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Body Fat Result Card -->
+        <div class="result-card" id="bodyfat-result-card" aria-label="Body fat result">
+          <div class="result-card__header">
+            <h3 class="result-card__title">Body Fat Percentage</h3>
+            <span class="result-card__abbr">BF%</span>
+          </div>
+          <div class="gauge-container">
+            <canvas id="bodyfat-gauge" width="200" height="120" aria-label="Body fat gauge chart" role="img"></canvas>
+          </div>
+          <div class="result-card__metric" id="bodyfat-value" aria-live="polite">
+            <span class="result-card__number" id="bodyfat-number">--</span>
+            <span class="result-card__unit">%</span>
+          </div>
+          <div class="result-card__category" id="bodyfat-category-badge" aria-live="polite">
+            <span class="category-badge" id="bodyfat-category-text">Enter your measurements</span>
+          </div>
+          <div class="result-card__insight" id="bodyfat-insight" aria-live="polite">
+            <p>Calculate your body fat to see personalized health insights here.</p>
+          </div>
+          <div class="result-card__ranges" id="bodyfat-ranges">
+            <h4 class="result-card__ranges-title">Body Fat Categories (Men)</h4>
+            <ul class="range-list" aria-label="Body fat category ranges">
+              <li class="range-item range-item--info"><span class="range-dot"></span><span>Essential Fat: 2–5%</span></li>
+              <li class="range-item range-item--success"><span class="range-dot"></span><span>Athlete: 6–13%</span></li>
+              <li class="range-item range-item--success"><span class="range-dot"></span><span>Fitness: 14–17%</span></li>
+              <li class="range-item range-item--warning"><span class="range-dot"></span><span>Average: 18–24%</span></li>
+              <li class="range-item range-item--danger"><span class="range-dot"></span><span>Obese: ≥ 25%</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disclaimer -->
+      <div class="disclaimer" role="note">
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M10 9v5M10 7h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <p><strong>Medical Disclaimer:</strong> These results are for informational purposes only and are not a substitute for professional medical advice. Always consult a qualified healthcare provider before making health decisions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AD PLACEHOLDER: Between Results and Content ===== -->
+  <div class="ad-container ad-container--mid" aria-label="Advertisement">
+    <p class="ad-label">Advertisement</p>
+    <!-- Adsterra ad code goes here -->
+    <div class="ad-placeholder" data-ad-slot="mid-content">
+      <span>Ad Space — 728×90</span>
+    </div>
+  </div>
+
+  <!-- ===== EDUCATIONAL CONTENT ===== -->
+  <div class="educational-wrapper">
+    <div class="container educational-inner">
+
+      <!-- What is BMI -->
+      <section class="edu-section" id="what-is-bmi" aria-labelledby="edu-bmi-heading">
+        <div class="edu-section__icon" aria-hidden="true">📊</div>
+        <h2 id="edu-bmi-heading" class="edu-section__title">What is BMI?</h2>
+        <div class="edu-section__body">
+          <p>
+            <strong>Body Mass Index (BMI)</strong> is a numerical value derived from a person's height and weight.
+            Developed by Belgian statistician Adolphe Quetelet in the 1830s, it provides a simple, quick screening
+            tool to categorize individuals into weight status categories.
+          </p>
+          <p>The formula is straightforward:</p>
+          <div class="formula-box" aria-label="BMI formula">
+            <strong>BMI = Weight (kg) ÷ Height² (m²)</strong>
+            <br /><em>Or in Imperial: BMI = 703 × Weight (lbs) ÷ Height² (in²)</em>
+          </div>
+          <p>
+            BMI is widely used by healthcare professionals as a first-pass screening tool because it requires
+            no special equipment — just a scale and a measuring tape. However, it does not directly measure
+            body fat and has known limitations, particularly for athletes and older adults.
+          </p>
+        </div>
+      </section>
+
+      <!-- What is Body Fat % -->
+      <section class="edu-section" id="what-is-body-fat" aria-labelledby="edu-bf-heading">
+        <div class="edu-section__icon" aria-hidden="true">💪</div>
+        <h2 id="edu-bf-heading" class="edu-section__title">What is Body Fat Percentage?</h2>
+        <div class="edu-section__body">
+          <p>
+            <strong>Body fat percentage</strong> is the proportion of your total body weight that is made up of
+            fat tissue. Unlike BMI, it directly distinguishes between fat mass and lean mass (muscle, bone,
+            organs, and water).
+          </p>
+          <p>Your body contains two types of fat:</p>
+          <ul class="edu-list">
+            <li><strong>Essential fat</strong> — necessary for hormonal function, organ protection, and temperature regulation (3–5% in men, 10–13% in women)</li>
+            <li><strong>Storage fat</strong> — accumulated in adipose tissue; excess amounts are linked to metabolic disease</li>
+          </ul>
+          <p>
+            Monitoring body fat percentage gives a far more nuanced picture of health than weight or BMI alone,
+            especially for people who exercise regularly or have unusual body compositions.
+          </p>
+        </div>
+      </section>
+
+      <!-- BMI vs Body Fat -->
+      <section class="edu-section" id="bmi-vs-bodyfat" aria-labelledby="edu-compare-heading">
+        <div class="edu-section__icon" aria-hidden="true">⚖️</div>
+        <h2 id="edu-compare-heading" class="edu-section__title">BMI vs Body Fat Percentage</h2>
+        <div class="edu-section__body">
+          <p>
+            Both metrics measure health risk related to body composition, but they approach it differently.
+            Here's how they compare:
+          </p>
+          <div class="comparison-table-wrapper" role="region" aria-label="BMI vs Body Fat comparison table" tabindex="0">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>BMI</th>
+                  <th>Body Fat %</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Measures fat directly</td>
+                  <td class="cell-no">No</td>
+                  <td class="cell-yes">Yes</td>
+                </tr>
+                <tr>
+                  <td>Accounts for muscle mass</td>
+                  <td class="cell-no">No</td>
+                  <td class="cell-yes">Yes</td>
+                </tr>
+                <tr>
+                  <td>Equipment needed</td>
+                  <td>Scale + ruler</td>
+                  <td>Tape measure</td>
+                </tr>
+                <tr>
+                  <td>Accuracy</td>
+                  <td>Moderate</td>
+                  <td>Higher</td>
+                </tr>
+                <tr>
+                  <td>Best for</td>
+                  <td>Population screening</td>
+                  <td>Individual assessment</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            For most people, using <em>both</em> metrics together provides the most complete picture.
+            A person can have a "normal" BMI but high body fat (called "skinny fat" or normal-weight obesity),
+            or a high BMI but low body fat (common in athletes).
+          </p>
+        </div>
+      </section>
+
+      <!-- US Navy Method -->
+      <section class="edu-section" id="navy-method" aria-labelledby="edu-navy-heading">
+        <div class="edu-section__icon" aria-hidden="true">⚓</div>
+        <h2 id="edu-navy-heading" class="edu-section__title">The US Navy Method Explained</h2>
+        <div class="edu-section__body">
+          <p>
+            The <strong>US Navy body fat estimation method</strong>, developed for military fitness standards,
+            uses simple circumference measurements to estimate body fat percentage. It was validated against
+            hydrostatic (underwater) weighing and is considered accurate to within 3–4%.
+          </p>
+          <h3 class="edu-section__subtitle">Formulas Used</h3>
+          <div class="formula-box" aria-label="US Navy body fat formulas">
+            <strong>For Men (cm):</strong><br />
+            BF% = 495 ÷ (1.0324 − 0.19077 × log₁₀(waist − neck) + 0.15456 × log₁₀(height)) − 450<br /><br />
+            <strong>For Women (cm):</strong><br />
+            BF% = 495 ÷ (1.29579 − 0.35004 × log₁₀(waist + hip − neck) + 0.22100 × log₁₀(height)) − 450
+          </div>
+          <h3 class="edu-section__subtitle">Measurement Guide</h3>
+          <ul class="edu-list">
+            <li><strong>Height:</strong> Stand straight without shoes; measure to the nearest 0.5 cm or 0.25 in</li>
+            <li><strong>Waist:</strong> Measure at the narrowest point (around the belly button), abdomen relaxed</li>
+            <li><strong>Neck:</strong> Measure just below the Adam's apple, tape sloping slightly downward</li>
+            <li><strong>Hip (women only):</strong> Measure at the widest point of hips and buttocks</li>
+          </ul>
+          <p>
+            For best accuracy, take each measurement 2–3 times and use the average. Measure in the morning
+            before eating or exercising.
+          </p>
+        </div>
+      </section>
+
+      <!-- Limitations of BMI -->
+      <section class="edu-section" id="bmi-limitations" aria-labelledby="edu-limits-heading">
+        <div class="edu-section__icon" aria-hidden="true">⚠️</div>
+        <h2 id="edu-limits-heading" class="edu-section__title">Limitations of BMI</h2>
+        <div class="edu-section__body">
+          <p>
+            While BMI is a useful population-level tool, it has several well-documented limitations when
+            applied to individuals:
+          </p>
+          <ul class="edu-list">
+            <li><strong>Muscle mass:</strong> Athletes and muscular individuals often register as "overweight" or "obese" despite having low body fat</li>
+            <li><strong>Age:</strong> Older adults tend to have more body fat for the same BMI; cut-offs may not be appropriate</li>
+            <li><strong>Sex:</strong> Women naturally carry more body fat than men at the same BMI</li>
+            <li><strong>Ethnicity:</strong> Health risks begin at lower BMI values for some Asian populations; WHO has proposed adjusted cut-offs</li>
+            <li><strong>Height extremes:</strong> Very short or tall individuals may get inaccurate readings</li>
+            <li><strong>Fat distribution:</strong> BMI says nothing about <em>where</em> fat is stored — visceral (belly) fat is more dangerous than subcutaneous fat</li>
+          </ul>
+          <p>
+            Clinicians typically use BMI alongside other measurements such as waist circumference, blood
+            markers, and body fat percentage for a comprehensive assessment.
+          </p>
+        </div>
+      </section>
+
+    </div><!-- /educational-inner -->
+  </div><!-- /educational-wrapper -->
+
+  <!-- ===== FAQ SECTION ===== -->
+  <section class="faq-section" id="faq" aria-labelledby="faq-heading">
+    <div class="container">
+      <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">Everything you need to know about BMI and body fat</p>
+
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>What is a healthy BMI for adults?</span>
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>For adults aged 18–65, a healthy BMI is between <strong>18.5 and 24.9</strong>. Below 18.5 indicates underweight; 25–29.9 is overweight; 30 and above is considered obese. Note that these thresholds may differ for certain ethnic groups — for example, some health organizations recommend lower cut-offs for people of Asian descent.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>How accurate is the US Navy body fat method?</span>
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>The US Navy method has been validated against hydrostatic weighing (considered the gold standard) and DEXA scanning. Studies show accuracy within <strong>3–4%</strong> for most adults. Accuracy is highest when measurements are taken carefully and consistently. It can be slightly less accurate for very lean or very obese individuals.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>What is a healthy body fat percentage?</span>
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Healthy ranges vary by sex and age. General guidelines from the American Council on Exercise:</p>
+            <ul>
+              <li><strong>Men:</strong> 6–13% (athletes), 14–17% (fitness), 18–24% (acceptable), 25%+ (obese)</li>
+              <li><strong>Women:</strong> 16–20% (athletes), 21–24% (fitness), 25–31% (acceptable), 32%+ (obese)</li>
+            </ul>
+            <p>Essential fat (required for survival) is 2–5% for men and 10–13% for women.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Can I be healthy with a high BMI?</span>
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Yes, it's possible. Athletes and highly muscular individuals often have a high BMI (overweight or obese category) despite having low body fat and excellent cardiovascular health. BMI does not distinguish between fat mass and muscle mass. This is why body fat percentage and other health markers (blood pressure, cholesterol, blood sugar) are important alongside BMI.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>How do I measure my waist, neck, and hip correctly?</span>
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <ul>
+              <li><strong>Waist:</strong> Stand relaxed (don't hold your breath in). Measure at the narrowest part of your torso, usually just above the belly button. Keep the tape horizontal.</li>
+              <li><strong>Neck:</strong> Measure just below the Adam's apple with the tape slanting slightly downward at the front.</li>
+              <li><strong>Hip (women):</strong> Stand with feet together. Measure at the widest part of your hips and buttocks, keeping the tape horizontal.</li>
+            </ul>
+            <p>Take each measurement twice and average the results for accuracy.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Does BMI apply to children?</span>
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>BMI is used for children and teens (aged 2–19) but is interpreted differently. Instead of fixed cut-offs, pediatric BMI is compared to <strong>age- and sex-specific percentiles</strong>. A child in the 85th–95th percentile is considered overweight; above the 95th percentile is obese. The adult BMI calculator on this page is not suitable for children.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>How often should I check my BMI and body fat?</span>
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>For most people, checking once a month is sufficient to track meaningful trends without getting caught up in daily fluctuations (which can be caused by hydration, meals, and clothing). If you're actively trying to lose fat or build muscle, measuring every 2–4 weeks alongside progress photos can be motivating and informative.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>What is the difference between visceral and subcutaneous fat?</span>
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p><strong>Subcutaneous fat</strong> is stored just beneath the skin — it's the fat you can pinch. While excess amounts are a concern, it's relatively less dangerous. <strong>Visceral fat</strong> is stored deep in the abdomen, surrounding organs like the liver and pancreas. It's metabolically active and strongly linked to insulin resistance, type 2 diabetes, heart disease, and inflammation. A large waist circumference is an indicator of excess visceral fat.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Is this calculator suitable for pregnant women?</span>
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>No. BMI and body fat calculators designed for general adults are <strong>not appropriate for pregnant women</strong>. Body weight and composition change dramatically during pregnancy for healthy reasons. Pregnant women should discuss weight management with their OB-GYN or midwife who can use pregnancy-specific growth charts and guidelines.</p>
+          </div>
+        </details>
+
+      </div><!-- /faq-list -->
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+
+      <div class="footer__grid">
+        <!-- Brand Column -->
+        <div class="footer__col footer__col--brand">
+          <div class="footer__logo">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true" class="footer__logo-icon">
+              <circle cx="16" cy="16" r="16" fill="#4A90E2"/>
+              <path d="M8 22 L13 14 L18 19 L22 11" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <circle cx="22" cy="11" r="2" fill="white"/>
+            </svg>
+            BMI Dashboard
+          </div>
+          <p class="footer__tagline">Free, accurate health calculators powered by the US Navy method.</p>
+          <div class="footer__contact">
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6l7 5 7-5M3 6a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            <a href="mailto:taeshinkim11@gmail.com" class="footer__email">taeshinkim11@gmail.com</a>
+          </div>
+          <p class="footer__built-by">Built by <strong>SPINAI</strong></p>
+        </div>
+
+        <!-- Links Column -->
+        <div class="footer__col">
+          <h3 class="footer__col-title">Quick Links</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="/" class="footer__link">Home</a></li>
+            <li><a href="#calculator" class="footer__link">BMI Calculator</a></li>
+            <li><a href="#calculator" class="footer__link">Body Fat Calculator</a></li>
+            <li><a href="#faq" class="footer__link">FAQ</a></li>
+            <li><a href="/howto" class="footer__link">How to Use</a></li>
+            <li><a href="/about" class="footer__link">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Column -->
+        <div class="footer__col">
+          <h3 class="footer__col-title">Legal</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="/privacy" class="footer__link">Privacy Policy</a></li>
+            <li><a href="/terms" class="footer__link">Terms of Service</a></li>
+            <li><a href="/contact" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Share & Actions Column -->
+        <div class="footer__col">
+          <h3 class="footer__col-title">Share This Tool</h3>
+          <div class="share-buttons" aria-label="Share buttons">
+            <a
+              href="https://twitter.com/intent/tweet?text=Check%20out%20this%20free%20BMI%20%26%20Body%20Fat%20Calculator!&url=https://bmi-bodyfat.vercel.app"
+              target="_blank" rel="noopener noreferrer"
+              class="share-btn share-btn--twitter"
+              aria-label="Share on Twitter"
+            >
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M18 3.5a8.5 8.5 0 01-2.45.67A4.26 4.26 0 0017.5 2a8.5 8.5 0 01-2.7 1.03A4.25 4.25 0 003.5 7.25c0 .33.04.65.1.96A12.06 12.06 0 012 3.75a4.25 4.25 0 001.31 5.67 4.22 4.22 0 01-1.92-.53v.05a4.26 4.26 0 003.41 4.17 4.3 4.3 0 01-1.92.07 4.25 4.25 0 003.97 2.95A8.53 8.53 0 012 17.54 12.06 12.06 0 008.46 19.5c7.76 0 12-6.43 12-12 0-.18 0-.36-.01-.54A8.57 8.57 0 0022 5a8.44 8.44 0 01-2.44.67A4.26 4.26 0 0018 3.5z"/></svg>
+              Twitter
+            </a>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://bmi-bodyfat.vercel.app"
+              target="_blank" rel="noopener noreferrer"
+              class="share-btn share-btn--facebook"
+              aria-label="Share on Facebook"
+            >
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M18 10a8 8 0 10-9.25 7.9v-5.59h-2.03V10h2.03V8.19c0-2 1.2-3.12 3.03-3.12.87 0 1.78.16 1.78.16v1.96h-1a1.15 1.15 0 00-1.3 1.25V10h2.22l-.36 2.31H12.25V17.9A8 8 0 0018 10z"/></svg>
+              Facebook
+            </a>
+            <a
+              href="https://wa.me/?text=Check%20out%20this%20free%20BMI%20%26%20Body%20Fat%20Calculator%3A%20https%3A%2F%2Fbmi-bodyfat.vercel.app"
+              target="_blank" rel="noopener noreferrer"
+              class="share-btn share-btn--whatsapp"
+              aria-label="Share on WhatsApp"
+            >
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 2a8 8 0 00-6.93 12l-1 3.5 3.6-1A8 8 0 1010 2zm4.13 10.9c-.18.5-1.04.96-1.43 1-.37.04-.72.17-2.44-.5-2.07-.82-3.4-2.93-3.5-3.07-.1-.14-.84-1.11-.84-2.12s.54-1.5.73-1.7a.77.77 0 01.56-.27c.14 0 .28 0 .4.01.13 0 .3-.05.47.36.18.43.6 1.48.66 1.59.06.11.1.24.02.38-.08.14-.12.23-.24.35-.12.12-.25.27-.35.36-.12.1-.24.22-.1.43.14.2.62.9 1.33 1.46.92.73 1.69.96 1.93 1.07.24.1.38.09.52-.05.14-.14.6-.7.76-.94.16-.24.32-.2.54-.12.22.08 1.4.66 1.64.78.24.12.4.18.46.28.06.1.06.57-.12 1.07z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+
+          <button class="btn btn--outline btn--print" id="print-results-btn" aria-label="Print your results">
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7V4h10v3M5 15H3a1 1 0 01-1-1V8a1 1 0 011-1h14a1 1 0 011 1v6a1 1 0 01-1 1h-2M5 11h10v6H5v-6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            Print Results
+          </button>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer__bottom">
+        <div class="visitor-counter" aria-live="polite" aria-label="Visitor count">
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="5" r="3" stroke="currentColor" stroke-width="1.2"/><path d="M2 14c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <span id="visitor-counter">Loading visitor count...</span>
+        </div>
+        <p class="footer__copyright">
+          &copy; <span id="footer-year">2025</span> BMI Dashboard by SPINAI. All rights reserved.
+        </p>
+        <p class="footer__disclaimer-short">
+          For informational use only. Not medical advice.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ===== FEEDBACK FLOATING BUTTON ===== -->
+  <button
+    class="feedback-fab"
+    id="feedback-btn"
+    aria-label="Open feedback form"
+    aria-haspopup="dialog"
+    aria-expanded="false"
+  >
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+    <span class="feedback-fab__label">Feedback</span>
+  </button>
+
+  <!-- ===== FEEDBACK MODAL ===== -->
+  <div class="modal-overlay" id="feedback-modal" role="dialog" aria-modal="true" aria-labelledby="feedback-modal-title" hidden>
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 id="feedback-modal-title" class="modal-title">Share Your Feedback</h2>
+        <button class="modal-close" id="feedback-modal-close" aria-label="Close feedback form">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 4l12 12M4 16L16 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <form id="feedback-form" class="modal-form" novalidate>
+        <div class="form-group">
+          <label for="feedback-type" class="form-label">Type of Feedback</label>
+          <select id="feedback-type" name="feedback-type" class="form-select" required aria-required="true">
+            <option value="">— Select a type —</option>
+            <option value="bug">Bug Report</option>
+            <option value="suggestion">Feature Suggestion</option>
+            <option value="accuracy">Accuracy Concern</option>
+            <option value="ui">User Interface</option>
+            <option value="general">General Comment</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="feedback-message" class="form-label">Your Message</label>
+          <textarea
+            id="feedback-message" name="feedback-message"
+            class="form-textarea" rows="4"
+            placeholder="Tell us what you think..."
+            required aria-required="true"
+            minlength="10" maxlength="1000"
+          ></textarea>
+          <span class="char-counter" id="feedback-char-count" aria-live="polite">0 / 1000</span>
+        </div>
+        <div class="form-error hidden" id="feedback-error" role="alert"></div>
+        <div class="modal-actions">
+          <button type="submit" class="btn btn--primary btn--full">
+            Send Feedback
+          </button>
+          <button type="button" class="btn btn--outline btn--full" id="feedback-cancel-btn">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== TOAST NOTIFICATION ===== -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden>
+    <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="8" fill="#52C41A"/><path d="M6 10l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span id="toast-message">Action completed successfully.</span>
+  </div>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="js/gauge.js" defer></script>
+  <script src="js/calculator.js" defer></script>
+  <script src="js/data-collector.js" defer></script>
+  <script src="js/counter.js" defer></script>
+  <script src="js/feedback.js" defer></script>
+</body>
+</html>

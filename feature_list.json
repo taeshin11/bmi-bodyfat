@@ -1,0 +1,135 @@
+[
+  {
+    "id": "F01",
+    "title": "Project Scaffold & Handoff Files",
+    "status": "done",
+    "priority": 1,
+    "description": "Create directory structure, index.html skeleton, CSS file, JS modules, handoff files (feature_list.json, claude-progress.txt, init.sh)"
+  },
+  {
+    "id": "F02",
+    "title": "BMI Calculator",
+    "status": "done",
+    "priority": 1,
+    "description": "Inputs: height (cm or ft/in), weight (kg or lbs). Unit toggle metric/imperial. Formula: weight(kg)/height(m)^2. Output: numeric BMI + WHO category."
+  },
+  {
+    "id": "F03",
+    "title": "US Navy Body Fat Calculator",
+    "status": "done",
+    "priority": 1,
+    "description": "Inputs: gender, waist, neck, height, hip (female). Male/Female formulas. Output: body fat % + ACE category."
+  },
+  {
+    "id": "F04",
+    "title": "Animated Gauge Charts",
+    "status": "done",
+    "priority": 2,
+    "description": "Pure SVG+CSS gauges, animated needle sweep, color-coded risk zones for BMI and body fat. Accessible with aria-label. Responsive 320px-1440px."
+  },
+  {
+    "id": "F05",
+    "title": "Input Validation & UX",
+    "status": "done",
+    "priority": 2,
+    "description": "Real-time validation, debounced auto-calc (300ms), smooth scroll to results, Reset button, localStorage for last inputs."
+  },
+  {
+    "id": "F06",
+    "title": "Combined Results Dashboard",
+    "status": "done",
+    "priority": 2,
+    "description": "BMI and Body Fat side-by-side, color-coded risk labels, health insight text, disclaimer."
+  },
+  {
+    "id": "F07",
+    "title": "Responsive Design",
+    "status": "done",
+    "priority": 2,
+    "description": "Mobile-first, breakpoints 320/768/1024/1440px, gauges stack on mobile, 44px tap targets."
+  },
+  {
+    "id": "F08",
+    "title": "SEO Meta Tags & Structured Data",
+    "status": "done",
+    "priority": 2,
+    "description": "Title, meta desc, OG tags, Twitter Card, JSON-LD (WebApplication, FAQPage, BreadcrumbList), canonical tag."
+  },
+  {
+    "id": "F09",
+    "title": "Sitemap & robots.txt",
+    "status": "done",
+    "priority": 3,
+    "description": "sitemap.xml with all pages, robots.txt allowing all crawlers."
+  },
+  {
+    "id": "F10",
+    "title": "PWA Manifest",
+    "status": "done",
+    "priority": 3,
+    "description": "manifest.json for Add to Home Screen, theme color, icons."
+  },
+  {
+    "id": "F11",
+    "title": "Educational Content & FAQ",
+    "status": "done",
+    "priority": 2,
+    "description": "What is BMI, Body Fat sections, BMI vs Body Fat comparison, US Navy Method explained, BMI limitations, FAQ (8+ questions) with details accordion."
+  },
+  {
+    "id": "F12",
+    "title": "Adsterra Ad Integration",
+    "status": "pending",
+    "priority": 3,
+    "description": "Social Bar in head, banner 728x90 below hero, native banner between results and content, in-page push. Needs Adsterra account keys."
+  },
+  {
+    "id": "F13",
+    "title": "Google Sheets Webhook",
+    "status": "pending",
+    "priority": 3,
+    "description": "Apps Script doPost function, frontend fire-and-forget fetch. Needs Apps Script deployment URL."
+  },
+  {
+    "id": "F14",
+    "title": "Visitor Counter",
+    "status": "done",
+    "priority": 3,
+    "description": "Today + Total counter in footer. sessionStorage deduplication. Graceful fallback using localStorage simulation (no external API dependency)."
+  },
+  {
+    "id": "F15",
+    "title": "Feedback Form",
+    "status": "done",
+    "priority": 3,
+    "description": "Floating bottom-right widget, type + message fields, mailto fallback, toast notification."
+  },
+  {
+    "id": "F16",
+    "title": "Policy Pages",
+    "status": "done",
+    "priority": 3,
+    "description": "about.html, privacy.html, terms.html, contact.html — required for AdSense approval."
+  },
+  {
+    "id": "F17",
+    "title": "Share & Print Functionality",
+    "status": "done",
+    "priority": 3,
+    "description": "Twitter, Facebook, WhatsApp share buttons with pre-filled result text. Print Results button."
+  },
+  {
+    "id": "F18",
+    "title": "Performance Optimization",
+    "status": "done",
+    "priority": 4,
+    "description": "Inline critical CSS, defer non-critical, minify HTML/CSS/JS, Lighthouse audit targeting 95+ performance."
+  },
+  {
+    "id": "F19",
+    "title": "Vercel Deployment",
+    "status": "pending",
+    "priority": 4,
+    "description": "Deploy via Vercel CLI, verify live site, update README with Vercel URL."
+  }
+]
