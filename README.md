@@ -94,28 +94,33 @@ See `claude-progress.txt` for the full feature log.
 
 ```
 bmi-bodyfat/
-├── index.html          # Main calculator page
+├── index.html          # Main calculator SPA
 ├── about.html          # About page
+├── howto.html          # How to Use guide
 ├── privacy.html        # Privacy Policy
 ├── terms.html          # Terms of Service
 ├── contact.html        # Contact page
 ├── css/
-│   └── style.css       # All styles
+│   └── style.css       # Complete design system
 ├── js/
-│   ├── calculator.js   # BMI + body fat formulas
-│   ├── ui.js           # DOM interactions, gauge charts
-│   ├── validator.js    # Input validation
-│   ├── storage.js      # localStorage helpers
-│   ├── share.js        # Share & print logic
-│   ├── feedback.js     # Feedback widget
+│   ├── calculator.js   # BMI + body fat formulas, tabs, validation, localStorage
+│   ├── gauge.js        # Canvas gauge chart renderer
+│   ├── feedback.js     # Floating feedback widget
 │   ├── counter.js      # Visitor counter
-│   └── data-collector.js  # Google Sheets webhook (pending)
+│   └── data-collector.js  # Analytics & Google Sheets webhook
+├── assets/
+│   └── og-image.svg    # Open Graph preview image
+├── icons/
+│   ├── icon-192.svg    # PWA icon 192x192
+│   └── icon-512.svg    # PWA icon 512x512
+├── favicon.svg         # Browser tab favicon
 ├── manifest.json       # PWA manifest
 ├── sitemap.xml         # XML sitemap
 ├── robots.txt          # Crawl directives
-├── vercel.json         # Vercel deployment config
+├── vercel.json         # Vercel config (clean URLs, headers, caching)
 ├── init.sh             # Local dev bootstrap script
 ├── claude-progress.txt # Build progress log
+├── feature_list.json   # Feature tracking
 └── README.md           # This file
 ```
 
