@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc -l /c/MakingApps/bmi-bodyfat/index.html /c/MakingApps/bmi-bodyfat/css/style.css /c/MakingApps/bmi-bodyfat/js/*.js)",
+      "WebFetch(domain:bmi-bodyfat.vercel.app)",
+      "Bash(vercel --prod --yes)"
+    ]
+  }
+}
