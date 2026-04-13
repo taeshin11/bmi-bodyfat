@@ -1,12 +1,16 @@
 {
-  "name": "BMI Dashboard",
+  "name": "BMI Dashboard — Free BMI & Body Fat Calculator",
   "short_name": "BMI Calc",
-  "description": "Free BMI and Body Fat Calculator using the US Navy Method.",
+  "description": "Free BMI and Body Fat Percentage calculator using the accurate US Navy Method. Visual gauges, personalized insights.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#F0F4F8",
   "theme_color": "#4A90E2",
   "orientation": "portrait-primary",
+  "lang": "en-US",
+  "dir": "ltr",
+  "categories": ["health", "fitness", "utilities"],
+  "screenshots": [],
   "icons": [
     {
       "src": "/icons/icon-192.svg",
@@ -21,7 +25,20 @@
       "purpose": "any maskable"
     }
   ],
-  "categories": ["health", "fitness", "utilities"],
-  "lang": "en-US",
-  "dir": "ltr"
+  "shortcuts": [
+    {
+      "name": "BMI Calculator",
+      "short_name": "BMI",
+      "description": "Calculate your Body Mass Index",
+      "url": "/#bmi-calculator",
+      "icons": [{ "src": "/icons/icon-192.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Body Fat Calculator",
+      "short_name": "Body Fat",
+      "description": "Calculate body fat percentage using US Navy method",
+      "url": "/#bodyfat-calculator",
+      "icons": [{ "src": "/icons/icon-192.svg", "sizes": "192x192" }]
+    }
+  ]
 }

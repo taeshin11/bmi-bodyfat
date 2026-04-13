@@ -17,8 +17,24 @@
   <meta property="og:site_name" content="BMI Dashboard" />
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#4A90E2" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="en" href="https://bmi-bodyfat.vercel.app/about" />
+  <link rel="alternate" hreflang="ko" href="https://bmi-bodyfat.vercel.app/about" />
+  <link rel="alternate" hreflang="ja" href="https://bmi-bodyfat.vercel.app/about" />
+  <link rel="alternate" hreflang="zh" href="https://bmi-bodyfat.vercel.app/about" />
+  <link rel="alternate" hreflang="es" href="https://bmi-bodyfat.vercel.app/about" />
+  <link rel="alternate" hreflang="fr" href="https://bmi-bodyfat.vercel.app/about" />
+  <link rel="alternate" hreflang="de" href="https://bmi-bodyfat.vercel.app/about" />
+  <link rel="alternate" hreflang="pt" href="https://bmi-bodyfat.vercel.app/about" />
+  <link rel="alternate" hreflang="x-default" href="https://bmi-bodyfat.vercel.app/about" />
+
   <link rel="stylesheet" href="css/style.css" />
-</head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7098271335538021" crossorigin="anonymous"></script>
+  </head>
 <body>
 
   <!-- Navbar -->
@@ -294,6 +310,11 @@
     </div>
   </footer>
 
+  <!-- Feedback Widget -->
+  <div id="bmi-feedback-widget" style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:0.5rem;">
+    <a id="bmi-feedback-mailto" href="mailto:taeshinkim11@gmail.com?subject=Feedback%20-%20BMI%20Dashboard" id="bmi-feedback-btn" style="display:inline-flex;align-items:center;gap:0.4rem;background:#4A90E2;color:#fff;font-size:0.85rem;font-weight:600;padding:0.55rem 1rem;border-radius:2rem;text-decoration:none;box-shadow:0 4px 12px rgba(74,144,226,0.4);transition:background 0.2s;" onmouseover="this.style.background='#357abd'" onmouseout="this.style.background='#4A90E2'" aria-label="Send feedback via email"><span id="bmi-feedback-btn">💬 Feedback</span></a>
+  </div>
+
   <script>
     // Mobile nav toggle
     const toggle = document.querySelector('.nav-toggle');
@@ -306,6 +327,7 @@
       });
     }
   </script>
+  <script src="js/i18n.js" defer></script>
 
 </body>
 </html>
