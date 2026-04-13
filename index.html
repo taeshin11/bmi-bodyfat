@@ -181,9 +181,9 @@
   <!-- ===== HERO ===== -->
   <section class="hero" aria-labelledby="hero-heading">
     <div class="container hero__inner">
-      <div class="hero__badge">Free Health Tool</div>
-      <h1 id="hero-heading" class="hero__title">Free BMI &amp; Body Fat Calculator</h1>
-      <p class="hero__subtitle">
+      <div class="hero__badge" data-i18n="heroBadge">Free Health Tool</div>
+      <h1 id="hero-heading" class="hero__title" data-i18n="heroTitle">Free BMI &amp; Body Fat Calculator</h1>
+      <p class="hero__subtitle" data-i18n="heroSubtitle">
         Get instant, accurate results using the clinically-validated US Navy method.
         Understand your health metrics with beautiful visual gauges and personalized insights.
       </p>
@@ -212,8 +212,8 @@
   <!-- ===== CALCULATOR SECTION ===== -->
   <section class="calculator-section" id="calculator" aria-labelledby="calculator-heading">
     <div class="container">
-      <h2 id="calculator-heading" class="section-title">Health Calculator</h2>
-      <p class="section-subtitle">Enter your measurements to get instant results</p>
+      <h2 id="calculator-heading" class="section-title" data-i18n="calcHeading">Health Calculator</h2>
+      <p class="section-subtitle" data-i18n="calcSubtitle">Enter your measurements to get instant results</p>
 
       <div class="calculator-card">
         <!-- Tab Buttons -->
@@ -247,18 +247,18 @@
           <form id="bmi-form" class="calc-form" novalidate>
             <!-- Unit Toggle -->
             <div class="form-group form-group--toggle">
-              <label class="form-label">Unit System</label>
+              <label class="form-label" data-i18n="unitSystemLabel">Unit System</label>
               <div class="unit-toggle" role="group" aria-label="Unit system">
                 <input type="radio" id="bmi-metric" name="bmi-unit" value="metric" checked />
-                <label for="bmi-metric" class="unit-toggle__btn">Metric</label>
+                <label for="bmi-metric" class="unit-toggle__btn" data-i18n="unitMetric">Metric</label>
                 <input type="radio" id="bmi-imperial" name="bmi-unit" value="imperial" />
-                <label for="bmi-imperial" class="unit-toggle__btn">Imperial</label>
+                <label for="bmi-imperial" class="unit-toggle__btn" data-i18n="unitImperial">Imperial</label>
               </div>
             </div>
 
             <!-- Height -->
             <div class="form-group" id="bmi-height-metric-group">
-              <label for="bmi-height-cm" class="form-label">Height</label>
+              <label for="bmi-height-cm" class="form-label" data-i18n="heightLabel">Height</label>
               <div class="input-with-unit">
                 <input
                   type="number" id="bmi-height-cm" name="bmi-height-cm"
@@ -270,7 +270,7 @@
               </div>
             </div>
             <div class="form-group form-group--split hidden" id="bmi-height-imperial-group">
-              <label class="form-label">Height</label>
+              <label class="form-label" data-i18n="heightLabel">Height</label>
               <div class="input-split">
                 <div class="input-with-unit">
                   <input
@@ -295,7 +295,7 @@
 
             <!-- Weight -->
             <div class="form-group" id="bmi-weight-metric-group">
-              <label for="bmi-weight-kg" class="form-label">Weight</label>
+              <label for="bmi-weight-kg" class="form-label" data-i18n="weightLabel">Weight</label>
               <div class="input-with-unit">
                 <input
                   type="number" id="bmi-weight-kg" name="bmi-weight-kg"
@@ -307,7 +307,7 @@
               </div>
             </div>
             <div class="form-group hidden" id="bmi-weight-imperial-group">
-              <label for="bmi-weight-lbs" class="form-label">Weight</label>
+              <label for="bmi-weight-lbs" class="form-label" data-i18n="weightLabel">Weight</label>
               <div class="input-with-unit">
                 <input
                   type="number" id="bmi-weight-lbs" name="bmi-weight-lbs"
@@ -321,7 +321,7 @@
 
             <!-- Age (optional, for context) -->
             <div class="form-group">
-              <label for="bmi-age" class="form-label">Age <span class="form-label--optional">(optional)</span></label>
+              <label for="bmi-age" class="form-label"><span data-i18n="ageLabel">Age</span> <span class="form-label--optional" data-i18n="ageOptional">(optional)</span></label>
               <div class="input-with-unit">
                 <input
                   type="number" id="bmi-age" name="bmi-age"
@@ -338,11 +338,11 @@
             <div class="form-actions">
               <button type="submit" class="btn btn--primary" id="bmi-calculate-btn">
                 <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Calculate BMI
+                <span data-i18n="calcBmiBtn">Calculate BMI</span>
               </button>
               <button type="button" class="btn btn--outline" id="bmi-reset-btn">
                 <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 4l12 12M4 16L16 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                Reset
+                <span data-i18n="resetBtn">Reset</span>
               </button>
             </div>
           </form>
@@ -353,42 +353,42 @@
           <form id="bodyfat-form" class="calc-form" novalidate>
             <!-- Gender Toggle -->
             <div class="form-group form-group--toggle">
-              <label class="form-label">Gender</label>
+              <label class="form-label" data-i18n="genderLabel">Gender</label>
               <div class="gender-toggle" role="group" aria-label="Gender">
                 <input type="radio" id="bf-male" name="bf-gender" value="male" checked />
                 <label for="bf-male" class="gender-toggle__btn">
                   <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="7" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M6 18v-2a4 4 0 018 0v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                  Male
+                  <span data-i18n="genderMale">Male</span>
                 </label>
                 <input type="radio" id="bf-female" name="bf-gender" value="female" />
                 <label for="bf-female" class="gender-toggle__btn">
                   <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="7" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M6 18v-2a4 4 0 018 0v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                  Female
+                  <span data-i18n="genderFemale">Female</span>
                 </label>
               </div>
             </div>
 
             <!-- Unit Toggle -->
             <div class="form-group form-group--toggle">
-              <label class="form-label">Unit System</label>
+              <label class="form-label" data-i18n="unitSystemLabel">Unit System</label>
               <div class="unit-toggle" role="group" aria-label="Unit system">
                 <input type="radio" id="bf-metric" name="bf-unit" value="metric" checked />
-                <label for="bf-metric" class="unit-toggle__btn">Metric</label>
+                <label for="bf-metric" class="unit-toggle__btn" data-i18n="unitMetric">Metric</label>
                 <input type="radio" id="bf-imperial" name="bf-unit" value="imperial" />
-                <label for="bf-imperial" class="unit-toggle__btn">Imperial</label>
+                <label for="bf-imperial" class="unit-toggle__btn" data-i18n="unitImperial">Imperial</label>
               </div>
             </div>
 
             <!-- Height -->
             <div class="form-group" id="bf-height-metric-group">
-              <label for="bf-height-cm" class="form-label">Height</label>
+              <label for="bf-height-cm" class="form-label" data-i18n="heightLabel">Height</label>
               <div class="input-with-unit">
                 <input type="number" id="bf-height-cm" name="bf-height-cm" class="form-input" placeholder="170" min="50" max="300" step="0.1" aria-label="Height in centimeters" />
                 <span class="input-unit">cm</span>
               </div>
             </div>
             <div class="form-group form-group--split hidden" id="bf-height-imperial-group">
-              <label class="form-label">Height</label>
+              <label class="form-label" data-i18n="heightLabel">Height</label>
               <div class="input-split">
                 <div class="input-with-unit">
                   <input type="number" id="bf-height-ft" name="bf-height-ft" class="form-input" placeholder="5" min="1" max="9" step="1" aria-label="Height feet" />
@@ -404,7 +404,7 @@
             <!-- Waist -->
             <div class="form-group" id="bf-waist-metric-group">
               <label for="bf-waist-cm" class="form-label">
-                Waist Circumference
+                <span data-i18n="waistLabel">Waist Circumference</span>
                 <button type="button" class="help-btn" aria-label="Help: where to measure waist" data-tooltip="Measure at the narrowest point, usually just above the belly button.">?</button>
               </label>
               <div class="input-with-unit">
@@ -414,7 +414,7 @@
             </div>
             <div class="form-group hidden" id="bf-waist-imperial-group">
               <label for="bf-waist-in" class="form-label">
-                Waist Circumference
+                <span data-i18n="waistLabel">Waist Circumference</span>
                 <button type="button" class="help-btn" aria-label="Help: where to measure waist" data-tooltip="Measure at the narrowest point, usually just above the belly button.">?</button>
               </label>
               <div class="input-with-unit">
@@ -426,7 +426,7 @@
             <!-- Neck -->
             <div class="form-group" id="bf-neck-metric-group">
               <label for="bf-neck-cm" class="form-label">
-                Neck Circumference
+                <span data-i18n="neckLabel">Neck Circumference</span>
                 <button type="button" class="help-btn" aria-label="Help: where to measure neck" data-tooltip="Measure just below the larynx (Adam's apple), slanting slightly downward.">?</button>
               </label>
               <div class="input-with-unit">
@@ -436,7 +436,7 @@
             </div>
             <div class="form-group hidden" id="bf-neck-imperial-group">
               <label for="bf-neck-in" class="form-label">
-                Neck Circumference
+                <span data-i18n="neckLabel">Neck Circumference</span>
                 <button type="button" class="help-btn" aria-label="Help: where to measure neck" data-tooltip="Measure just below the larynx (Adam's apple), slanting slightly downward.">?</button>
               </label>
               <div class="input-with-unit">
@@ -448,7 +448,7 @@
             <!-- Hip (Female only) -->
             <div class="form-group" id="bf-hip-metric-group">
               <label for="bf-hip-cm" class="form-label">
-                Hip Circumference
+                <span data-i18n="hipLabel">Hip Circumference</span>
                 <button type="button" class="help-btn" aria-label="Help: where to measure hips" data-tooltip="Measure at the widest point of the hips and buttocks.">?</button>
               </label>
               <div class="input-with-unit">
@@ -458,7 +458,7 @@
             </div>
             <div class="form-group hidden" id="bf-hip-imperial-group">
               <label for="bf-hip-in" class="form-label">
-                Hip Circumference
+                <span data-i18n="hipLabel">Hip Circumference</span>
                 <button type="button" class="help-btn" aria-label="Help: where to measure hips" data-tooltip="Measure at the widest point of the hips and buttocks.">?</button>
               </label>
               <div class="input-with-unit">
@@ -472,11 +472,11 @@
             <div class="form-actions">
               <button type="submit" class="btn btn--primary" id="bodyfat-calculate-btn">
                 <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Calculate Body Fat
+                <span data-i18n="calcBfBtn">Calculate Body Fat</span>
               </button>
               <button type="button" class="btn btn--outline" id="bodyfat-reset-btn">
                 <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 4l12 12M4 16L16 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                Reset
+                <span data-i18n="resetBtn">Reset</span>
               </button>
             </div>
           </form>
@@ -488,14 +488,14 @@
   <!-- ===== RESULTS DASHBOARD ===== -->
   <section class="results-section" id="results" aria-labelledby="results-heading" aria-live="polite">
     <div class="container">
-      <h2 id="results-heading" class="section-title">Your Results</h2>
-      <p class="section-subtitle">Visual breakdown of your health metrics</p>
+      <h2 id="results-heading" class="section-title" data-i18n="resultsHeading">Your Results</h2>
+      <p class="section-subtitle" data-i18n="resultsSubtitle">Visual breakdown of your health metrics</p>
 
       <div class="results-grid">
         <!-- BMI Result Card -->
         <div class="result-card" id="bmi-result-card" aria-label="BMI result">
           <div class="result-card__header">
-            <h3 class="result-card__title">Body Mass Index</h3>
+            <h3 class="result-card__title" data-i18n="bmiCardTitle">Body Mass Index</h3>
             <span class="result-card__abbr">BMI</span>
           </div>
           <div class="gauge-container">
@@ -506,18 +506,18 @@
             <span class="result-card__unit">kg/m²</span>
           </div>
           <div class="result-card__category" id="bmi-category-badge" aria-live="polite">
-            <span class="category-badge" id="bmi-category-text">Enter your measurements</span>
+            <span class="category-badge" id="bmi-category-text" data-i18n="bmiDefaultCategory">Enter your measurements</span>
           </div>
           <div class="result-card__insight" id="bmi-insight" aria-live="polite">
-            <p>Calculate your BMI to see personalized health insights here.</p>
+            <p data-i18n="bmiDefaultInsight">Calculate your BMI to see personalized health insights here.</p>
           </div>
           <div class="result-card__ranges">
-            <h4 class="result-card__ranges-title">BMI Categories</h4>
+            <h4 class="result-card__ranges-title" data-i18n="bmiCategoryRangesTitle">BMI Categories</h4>
             <ul class="range-list" aria-label="BMI category ranges">
-              <li class="range-item range-item--info"><span class="range-dot"></span><span>Underweight: &lt; 18.5</span></li>
-              <li class="range-item range-item--success"><span class="range-dot"></span><span>Normal: 18.5 – 24.9</span></li>
-              <li class="range-item range-item--warning"><span class="range-dot"></span><span>Overweight: 25 – 29.9</span></li>
-              <li class="range-item range-item--danger"><span class="range-dot"></span><span>Obese: ≥ 30</span></li>
+              <li class="range-item range-item--info"><span class="range-dot"></span><span data-i18n="bmiUnderweight">Underweight: &lt; 18.5</span></li>
+              <li class="range-item range-item--success"><span class="range-dot"></span><span data-i18n="bmiNormal">Normal: 18.5 – 24.9</span></li>
+              <li class="range-item range-item--warning"><span class="range-dot"></span><span data-i18n="bmiOverweight">Overweight: 25 – 29.9</span></li>
+              <li class="range-item range-item--danger"><span class="range-dot"></span><span data-i18n="bmiObese">Obese: ≥ 30</span></li>
             </ul>
           </div>
         </div>
@@ -525,7 +525,7 @@
         <!-- Body Fat Result Card -->
         <div class="result-card" id="bodyfat-result-card" aria-label="Body fat result">
           <div class="result-card__header">
-            <h3 class="result-card__title">Body Fat Percentage</h3>
+            <h3 class="result-card__title" data-i18n="bfCardTitle">Body Fat Percentage</h3>
             <span class="result-card__abbr">BF%</span>
           </div>
           <div class="gauge-container">
@@ -536,19 +536,19 @@
             <span class="result-card__unit">%</span>
           </div>
           <div class="result-card__category" id="bodyfat-category-badge" aria-live="polite">
-            <span class="category-badge" id="bodyfat-category-text">Enter your measurements</span>
+            <span class="category-badge" id="bodyfat-category-text" data-i18n="bfDefaultCategory">Enter your measurements</span>
           </div>
           <div class="result-card__insight" id="bodyfat-insight" aria-live="polite">
-            <p>Calculate your body fat to see personalized health insights here.</p>
+            <p data-i18n="bfDefaultInsight">Calculate your body fat to see personalized health insights here.</p>
           </div>
           <div class="result-card__ranges" id="bodyfat-ranges">
-            <h4 class="result-card__ranges-title">Body Fat Categories (Men)</h4>
+            <h4 class="result-card__ranges-title" data-i18n="bfCategoriesMen">Body Fat Categories (Men)</h4>
             <ul class="range-list" aria-label="Body fat category ranges">
-              <li class="range-item range-item--info"><span class="range-dot"></span><span>Essential Fat: 2–5%</span></li>
-              <li class="range-item range-item--success"><span class="range-dot"></span><span>Athlete: 6–13%</span></li>
-              <li class="range-item range-item--success"><span class="range-dot"></span><span>Fitness: 14–17%</span></li>
-              <li class="range-item range-item--warning"><span class="range-dot"></span><span>Average: 18–24%</span></li>
-              <li class="range-item range-item--danger"><span class="range-dot"></span><span>Obese: ≥ 25%</span></li>
+              <li class="range-item range-item--info"><span class="range-dot"></span><span data-i18n="bfEssential">Essential Fat: 2–5%</span></li>
+              <li class="range-item range-item--success"><span class="range-dot"></span><span data-i18n="bfAthlete">Athlete: 6–13%</span></li>
+              <li class="range-item range-item--success"><span class="range-dot"></span><span data-i18n="bfFitness">Fitness: 14–17%</span></li>
+              <li class="range-item range-item--warning"><span class="range-dot"></span><span data-i18n="bfAverage">Average: 18–24%</span></li>
+              <li class="range-item range-item--danger"><span class="range-dot"></span><span data-i18n="bfObese">Obese: ≥ 25%</span></li>
             </ul>
           </div>
         </div>
@@ -557,7 +557,7 @@
       <!-- Disclaimer -->
       <div class="disclaimer" role="note">
         <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M10 9v5M10 7h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        <p><strong>Medical Disclaimer:</strong> These results are for informational purposes only and are not a substitute for professional medical advice. Always consult a qualified healthcare provider before making health decisions.</p>
+        <p><strong data-i18n="disclaimerLabel">Medical Disclaimer:</strong> <span data-i18n="disclaimerText">These results are for informational purposes only and are not a substitute for professional medical advice. Always consult a qualified healthcare provider before making health decisions.</span></p>
       </div>
     </div>
   </section>
@@ -583,7 +583,7 @@
       <!-- What is BMI -->
       <section class="edu-section" id="what-is-bmi" aria-labelledby="edu-bmi-heading">
         <div class="edu-section__icon" aria-hidden="true">📊</div>
-        <h2 id="edu-bmi-heading" class="edu-section__title">What is BMI?</h2>
+        <h2 id="edu-bmi-heading" class="edu-section__title" data-i18n="eduBmiTitle">What is BMI?</h2>
         <div class="edu-section__body">
           <p>
             <strong>Body Mass Index (BMI)</strong> is a numerical value derived from a person's height and weight.
@@ -606,7 +606,7 @@
       <!-- What is Body Fat % -->
       <section class="edu-section" id="what-is-body-fat" aria-labelledby="edu-bf-heading">
         <div class="edu-section__icon" aria-hidden="true">💪</div>
-        <h2 id="edu-bf-heading" class="edu-section__title">What is Body Fat Percentage?</h2>
+        <h2 id="edu-bf-heading" class="edu-section__title" data-i18n="eduBfTitle">What is Body Fat Percentage?</h2>
         <div class="edu-section__body">
           <p>
             <strong>Body fat percentage</strong> is the proportion of your total body weight that is made up of
@@ -628,7 +628,7 @@
       <!-- BMI vs Body Fat -->
       <section class="edu-section" id="bmi-vs-bodyfat" aria-labelledby="edu-compare-heading">
         <div class="edu-section__icon" aria-hidden="true">⚖️</div>
-        <h2 id="edu-compare-heading" class="edu-section__title">BMI vs Body Fat Percentage</h2>
+        <h2 id="edu-compare-heading" class="edu-section__title" data-i18n="eduCompareTitle">BMI vs Body Fat Percentage</h2>
         <div class="edu-section__body">
           <p>
             Both metrics measure health risk related to body composition, but they approach it differently.
@@ -683,7 +683,7 @@
       <!-- US Navy Method -->
       <section class="edu-section" id="navy-method" aria-labelledby="edu-navy-heading">
         <div class="edu-section__icon" aria-hidden="true">⚓</div>
-        <h2 id="edu-navy-heading" class="edu-section__title">The US Navy Method Explained</h2>
+        <h2 id="edu-navy-heading" class="edu-section__title" data-i18n="eduNavyTitle">The US Navy Method Explained</h2>
         <div class="edu-section__body">
           <p>
             The <strong>US Navy body fat estimation method</strong>, developed for military fitness standards,
@@ -714,7 +714,7 @@
       <!-- Limitations of BMI -->
       <section class="edu-section" id="bmi-limitations" aria-labelledby="edu-limits-heading">
         <div class="edu-section__icon" aria-hidden="true">⚠️</div>
-        <h2 id="edu-limits-heading" class="edu-section__title">Limitations of BMI</h2>
+        <h2 id="edu-limits-heading" class="edu-section__title" data-i18n="eduLimitsTitle">Limitations of BMI</h2>
         <div class="edu-section__body">
           <p>
             While BMI is a useful population-level tool, it has several well-documented limitations when
@@ -741,14 +741,14 @@
   <!-- ===== FAQ SECTION ===== -->
   <section class="faq-section" id="faq" aria-labelledby="faq-heading">
     <div class="container">
-      <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
-      <p class="section-subtitle">Everything you need to know about BMI and body fat</p>
+      <h2 id="faq-heading" class="section-title" data-i18n="faqHeading">Frequently Asked Questions</h2>
+      <p class="section-subtitle" data-i18n="faqSubtitle">Everything you need to know about BMI and body fat</p>
 
       <div class="faq-list">
 
         <details class="faq-item">
           <summary class="faq-question">
-            <span>What is a healthy BMI for adults?</span>
+            <span data-i18n="faq1q">What is a healthy BMI for adults?</span>
             <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </summary>
           <div class="faq-answer">
@@ -758,7 +758,7 @@
 
         <details class="faq-item">
           <summary class="faq-question">
-            <span>How accurate is the US Navy body fat method?</span>
+            <span data-i18n="faq2q">How accurate is the US Navy body fat method?</span>
             <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </summary>
           <div class="faq-answer">
@@ -768,7 +768,7 @@
 
         <details class="faq-item">
           <summary class="faq-question">
-            <span>What is a healthy body fat percentage?</span>
+            <span data-i18n="faq3q">What is a healthy body fat percentage?</span>
             <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </summary>
           <div class="faq-answer">
@@ -783,7 +783,7 @@
 
         <details class="faq-item">
           <summary class="faq-question">
-            <span>Can I be healthy with a high BMI?</span>
+            <span data-i18n="faq4q">Can I be healthy with a high BMI?</span>
             <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </summary>
           <div class="faq-answer">
@@ -793,7 +793,7 @@
 
         <details class="faq-item">
           <summary class="faq-question">
-            <span>How do I measure my waist, neck, and hip correctly?</span>
+            <span data-i18n="faq5q">How do I measure my waist, neck, and hip correctly?</span>
             <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </summary>
           <div class="faq-answer">
@@ -808,7 +808,7 @@
 
         <details class="faq-item">
           <summary class="faq-question">
-            <span>Does BMI apply to children?</span>
+            <span data-i18n="faq6q">Does BMI apply to children?</span>
             <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </summary>
           <div class="faq-answer">
@@ -818,7 +818,7 @@
 
         <details class="faq-item">
           <summary class="faq-question">
-            <span>How often should I check my BMI and body fat?</span>
+            <span data-i18n="faq7q">How often should I check my BMI and body fat?</span>
             <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </summary>
           <div class="faq-answer">
@@ -828,7 +828,7 @@
 
         <details class="faq-item">
           <summary class="faq-question">
-            <span>What is the difference between visceral and subcutaneous fat?</span>
+            <span data-i18n="faq8q">What is the difference between visceral and subcutaneous fat?</span>
             <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </summary>
           <div class="faq-answer">
@@ -838,7 +838,7 @@
 
         <details class="faq-item">
           <summary class="faq-question">
-            <span>Is this calculator suitable for pregnant women?</span>
+            <span data-i18n="faq9q">Is this calculator suitable for pregnant women?</span>
             <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </summary>
           <div class="faq-answer">
@@ -865,7 +865,7 @@
             </svg>
             BMI Dashboard
           </div>
-          <p class="footer__tagline">Free, accurate health calculators powered by the US Navy method.</p>
+          <p class="footer__tagline" data-i18n="footerTagline">Free, accurate health calculators powered by the US Navy method.</p>
           <div class="footer__contact">
             <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6l7 5 7-5M3 6a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
             <a href="mailto:taeshinkim11@gmail.com" class="footer__email">taeshinkim11@gmail.com</a>
@@ -875,7 +875,7 @@
 
         <!-- Links Column -->
         <div class="footer__col">
-          <h3 class="footer__col-title">Quick Links</h3>
+          <h3 class="footer__col-title" data-i18n="footerQuickLinks">Quick Links</h3>
           <ul class="footer__links" role="list">
             <li><a href="/" class="footer__link">Home</a></li>
             <li><a href="#calculator" class="footer__link">BMI Calculator</a></li>
@@ -888,7 +888,7 @@
 
         <!-- Legal Column -->
         <div class="footer__col">
-          <h3 class="footer__col-title">Legal</h3>
+          <h3 class="footer__col-title" data-i18n="footerLegal">Legal</h3>
           <ul class="footer__links" role="list">
             <li><a href="/privacy" class="footer__link">Privacy Policy</a></li>
             <li><a href="/terms" class="footer__link">Terms of Service</a></li>
@@ -898,7 +898,7 @@
 
         <!-- Share & Actions Column -->
         <div class="footer__col">
-          <h3 class="footer__col-title">Share This Tool</h3>
+          <h3 class="footer__col-title" data-i18n="footerShare">Share This Tool</h3>
           <div class="share-buttons" aria-label="Share buttons">
             <a
               href="https://twitter.com/intent/tweet?text=Check%20out%20this%20free%20BMI%20%26%20Body%20Fat%20Calculator!&url=https://bmi-bodyfat.vercel.app"
@@ -945,7 +945,7 @@
         <p class="footer__copyright">
           &copy; <span id="footer-year">2025</span> BMI Dashboard by SPINAI. All rights reserved.
         </p>
-        <p class="footer__disclaimer-short">
+        <p class="footer__disclaimer-short" data-i18n="footerDisclaimer">
           For informational use only. Not medical advice.
         </p>
       </div>
@@ -962,36 +962,37 @@
     aria-expanded="false"
   >
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-    <span class="feedback-fab__label">Feedback</span>
+    <span class="feedback-fab__label" data-i18n="feedbackFabLabel">Feedback</span>
   </button>
 
   <!-- ===== FEEDBACK MODAL ===== -->
   <div class="modal-overlay" id="feedback-modal" role="dialog" aria-modal="true" aria-labelledby="feedback-modal-title" hidden>
     <div class="modal-card">
       <div class="modal-header">
-        <h2 id="feedback-modal-title" class="modal-title">Share Your Feedback</h2>
+        <h2 id="feedback-modal-title" class="modal-title" data-i18n="feedbackModalTitle">Share Your Feedback</h2>
         <button class="modal-close" id="feedback-modal-close" aria-label="Close feedback form">
           <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 4l12 12M4 16L16 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </button>
       </div>
       <form id="feedback-form" class="modal-form" novalidate>
         <div class="form-group">
-          <label for="feedback-type" class="form-label">Type of Feedback</label>
+          <label for="feedback-type" class="form-label" data-i18n="feedbackTypeLabel">Type of Feedback</label>
           <select id="feedback-type" name="feedback-type" class="form-select" required aria-required="true">
-            <option value="">— Select a type —</option>
-            <option value="bug">Bug Report</option>
-            <option value="suggestion">Feature Suggestion</option>
-            <option value="accuracy">Accuracy Concern</option>
-            <option value="ui">User Interface</option>
-            <option value="general">General Comment</option>
+            <option value="" data-i18n="feedbackTypeDefault">— Select a type —</option>
+            <option value="bug" data-i18n="feedbackTypeBug">Bug Report</option>
+            <option value="suggestion" data-i18n="feedbackTypeSuggestion">Feature Suggestion</option>
+            <option value="accuracy" data-i18n="feedbackTypeAccuracy">Accuracy Concern</option>
+            <option value="ui" data-i18n="feedbackTypeUi">User Interface</option>
+            <option value="general" data-i18n="feedbackTypeGeneral">General Comment</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="feedback-message" class="form-label">Your Message</label>
+          <label for="feedback-message" class="form-label" data-i18n="feedbackMessageLabel">Your Message</label>
           <textarea
             id="feedback-message" name="feedback-message"
             class="form-textarea" rows="4"
             placeholder="Tell us what you think..."
+            data-i18n-placeholder="feedbackMessagePlaceholder"
             required aria-required="true"
             minlength="10" maxlength="1000"
           ></textarea>
@@ -999,10 +1000,10 @@
         </div>
         <div class="form-error hidden" id="feedback-error" role="alert"></div>
         <div class="modal-actions">
-          <button type="submit" class="btn btn--primary btn--full">
+          <button type="submit" class="btn btn--primary btn--full" data-i18n="feedbackSendBtn">
             Send Feedback
           </button>
-          <button type="button" class="btn btn--outline btn--full" id="feedback-cancel-btn">
+          <button type="button" class="btn btn--outline btn--full" id="feedback-cancel-btn" data-i18n="feedbackCancelBtn">
             Cancel
           </button>
         </div>
